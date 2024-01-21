@@ -189,11 +189,16 @@ function convertNumberToString(numberStr) {
  *
  * @example:
  *  'abcba'     => true
- *  '0123210'   => true
+ *  '0123210'   => true  isPalindrome('qweqwe')
  *  'qweqwe'    => false
  */
-function isPalindrome(/* str */) {
-  throw new Error('Not implemented');
+function isPalindrome(str) {
+  for (let i = 0; i < str.length / 2; i += 1) {
+    if (str[i] !== str[str.length - 1 - i]) {
+      return false;
+    }
+  }
+  return true;
 }
 
 /**
